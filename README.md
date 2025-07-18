@@ -27,17 +27,17 @@ python -m pip install --upgrade pip
 
 #### 3. Install Required Libraries
 The required python libraries include: 
-- `PIL`
-- `opencv-python`
+- `SimpleITK`
+- `os`
+- `cv2`
 - `numpy`
-- `scipy`
-- `scikit-image`
+- `shutil`
 - `pandas`
+- `PIL`
 - `openpyxl`
 - `itertools`
-- `os`
-- `SimpleITK`
-- `SimpleITK-SimpleElastix`<br>
+- `sklearn.metrics`
+- `scipy.optimize`<br>
 
 For example, to install `numpy`, execute the following command in your terminal or command prompt:
 
