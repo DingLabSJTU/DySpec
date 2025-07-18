@@ -1,0 +1,1 @@
+elastix -f fixed.mhd -m moving.mhd -p Parameters_Similarity.txt -out .
