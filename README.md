@@ -1,48 +1,33 @@
-# Customized algorithm for DySpec
-Dynamic Spectra (DySpec) is a spectrum-transforming fluorescent barcode coupled with time-lapse imaging to exponentially increase the number of co-imaged proteins. Theoretically, if *F* fluorophores are imaged in each cycle, *N* cycles of image can visualize *F<sup>N</sup>* proteins. To decode proteins from DySpec images, we developed two customized algorithms here: `Image subtraction` and `Linear unmixing`. The step-by-step operations and critical considerations are outlined in detail below.
+# DySpec-U: customized image unmixing algorithm for DySpec
+Dynamic Spectra (DySpec) is a spectrum-transforming fluorescent barcode coupled with time-lapse imaging to exponentially increase the number of co-imaged proteins. Theoretically, if *F* fluorophores are imaged in each cycle, *N* cycles of imaging can visualize *F<sup>N</sup>* proteins. To decode proteins from DySpec images, we developed a customized algorithm called `DySpec Unmixing (DySpec-U)`. The detailed decoding principle is introduced in `Supplementary Note 7` of 《Dynamic Spectra: Fluorescence-Transforming Barcodes for High-Dimensional Proteomic Imaging》. The step-by-step operations are outlined below.
 
 ### Hardware
-- Computer workstation equipped with an AMD Ryzen 5975WX CPU
-- NVIDIA RTX 3090 graphics processing card
+- Workstation: DELL T5860
+- CPU: Intel Xeon W7-2475X
+- GPU: NVIDIA RTX 5090 graphics processing card
 
 ### Software
-- [Python](https://www.python.org/).
-- [Jupyter Notebook](https://jupyter.org/).
+- [PyCharm](https://www.jetbrains.com/zh-cn/pycharm/)
+- [elastix](https://elastix.dev/)
+- [QuPath](https://qupath.github.io/)
 - [Fiji](https://imagej.net/software/fiji/downloads)
 - [ZEN](https://www.zeiss.com/microscopy/zh/products/software/zeiss-zen.html)
-- [elastix](https://elastix.dev/).
+
 
 ### Steps to install python environment and libraries:
 
-#### 1. Install Jupyter Notebook 7.x (or Python 3.x)
-- `Jupyter Notebook 7.x` is available for download from the [official Jupyter website](https://jupyter.org/).
-- `Python 3.x` is available for download from the [official Python website](https://www.python.org/).
+#### 1. Install PyCharm
+- Download PyCharm (2024.3.2) from the [official PyCharm website](https://www.jetbrains.com/zh-cn/pycharm/)
 
-#### 2. Update `pip` (optional)
-It's a good practice to keep `pip` up to date. Open a terminal (or command prompt) and run the following command:
+#### 2. Create DySpec-U environment
+- In PyCharm software, create a new environment named `DySpec-U` for DySpec
 
-```bash
-python -m pip install --upgrade pip
-```
-
-#### 3. Install Required Libraries
-The required python libraries include: 
-- `SimpleITK`
-- `os`
-- `cv2`
-- `numpy`
-- `shutil`
-- `pandas`
-- `PIL`
-- `openpyxl`
-- `itertools`
-- `sklearn.metrics`
-- `scipy.optimize`<br>
-
-For example, to install `numpy`, execute the following command in your terminal or command prompt:
+#### 3. Download required libraries
+- The required python libraries and versions are listed in `Supplementary Table 10` of 《Dynamic Spectra: Fluorescence-Transforming Barcodes for High-Dimensional Proteomic Imaging》.
+- To install `XXX`, execute the following command in your terminal or command prompt:
 
 ```bash
-pip install numpy
+pip install XXX
 ```
 
 #### 4. Verify Installation
@@ -58,8 +43,7 @@ print(f"cv2 version: {cv2.__version__}")
 print(f"pandas version: {pd.__version__}")
 ```
 
-This script will print the installed versions of the libraries. If you see the version numbers printed without any errors, the libraries were installed successfully.
+Successful installation of the libraries can be verified by confirming that the version numbers are displayed without any error messages.
 
 ### Run the code
-- Execute the integrated Notebook from Step 1 to Step 7 in order.
-- Test images are included in each subfolder.
+- Execute Steps 1 to 10 sequentially, following the instructions in `Supplementary Note 7` of 《Dynamic Spectra: Fluorescence-Transforming Barcodes for High-Dimensional Proteomic Imaging》.
