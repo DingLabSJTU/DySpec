@@ -1,8 +1,0 @@
-ObjectType = Image
-NDims = 2
-BinaryData = True
-BinaryDataByteOrderMSB = True
-ElementSpacing = 1 1
-DimSize = 512 512
-ElementType = MET_USHORT
-ElementDataFile = moving.raw
